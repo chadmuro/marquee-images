@@ -10,3 +10,31 @@ body {
     justify-content: center;
     align-items: center;
 }
+
+.marquee {
+    width: 800px;
+    height: 150px;
+    overflow: hidden;
+}
+
+.marquee-content {
+    display: flex;
+    list-style: none;
+    animation: scrolling 10s linear infinite;
+}
+
+.marquee-item {
+    height: 150px;
+    width: 200px;
+    flex-shrink: 0;
+}
+
+.marquee-image {
+    height: 100%;
+    width: 100%;
+}
+
+@keyframes scrolling {
+    0% { transform: translateX(0); }
+    100% { transform: translatex(-1000px); }
+}
